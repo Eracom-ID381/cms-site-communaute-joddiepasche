@@ -2,40 +2,41 @@
 @import "_includes/variables.scss";
 @import "_includes/mixins.scss";
 
-header {
-    background: rgba(255, 0, 255);
-    height: 100px;
-    width: 100%;
+
+* {
+	margin: 0;
+	padding: 0;
 }
 
-main {
-    background: rgba(255, 255, 255);
-
-    // ON PEUT CALCULER DES CHOSES EN PURE CSS
-    height: calc(100vh - 100px * 2);
-
-    // GRID SETTINGS
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-gap: 1rem;
+h1 {
+	margin: 0;
 }
 
-.image-section {
-    padding: 1rem;
-
+body {
+	font-family: 'Stalinist One', cursive;
+	font-size: 30px;
 }
 
-.image-section img {
-    width: 100%;
-}
 
-.text-section {
-    padding: 1rem;
-}
 
-footer {
-    background: rgba(252, 62, 158);
-    height: 100px;
+// LE SELECTEUR
+section {
+	// LA PROPRIETE: LA VALEUR
+	height: 100vh; // VIEWPORT HEIGHT
+	width: 100vw; // VIEWPORT WIDTH
+	// = section.red
+	&.red {
+		background-color: $primary-color;
+		color: $secondary-color;
+	}
+	&.black {
+		background-color: $secondary-color;
+		color: $primary-color;
+	}
+
+	.title {
+		font-size: 2.5rem;
+		padding: $margin;
+		text-align: center;
+	}
 }
