@@ -41,6 +41,10 @@ section {
 		text-align: center;
 	}
 
+	a {
+		color: $primary-color;
+	}
+
 	.three-columns {
 		align-items: center;
 		display: grid;
