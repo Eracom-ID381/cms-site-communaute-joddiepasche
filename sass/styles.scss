@@ -32,6 +32,7 @@ section {
 	&.black {
 		background-color: $secondary-color;
 		color: $primary-color;
+		position: relative;
 	}
 
 	.title {
@@ -46,12 +47,6 @@ section {
 		grid-template-columns: 1fr 1fr 1fr;
 		text-align: center;
 
-	.galerie {
-		position: relative;
-		text-align: center;
-		color: white;
-	}
-
 	.centered {
 		position: absolute;
 		top: 50%;
@@ -61,6 +56,9 @@ section {
 
 		img {
 			max-height: 60vh;
+			&.petite {
+				max-height: 50px;
+			}
 		}
 
 		a {
@@ -68,7 +66,21 @@ section {
 			background-color: $primary-color;
 		}
 
-		.link { color: #FF0000; }
+		.link {
+			color: #FF0000;
+		}
 	}
+	.galerie {
 
+			position: absolute;
+			text-align: center;
+			color: white;
+			max-width: 50vw;
+			right: 0;
+			bottom: 0;
+
+			img {
+				max-height: 30vh;
+			}
+	}
 }
